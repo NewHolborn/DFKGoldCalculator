@@ -4,7 +4,7 @@ A simple quest loot calculator for Defi Kingdoms
 Well the story goes like this : I wanted to calculate how much gold my two fishermen are generating through quests in a week time period , 
 and also I wanted to write some HARMONY related code so I started this small project.
 
-Found an API () and from there I was able to get the balance of a wallet and also all the transactions related to DFK.
+Found an API (https://api.s0.t.hmny.io/) and from there I was able to get the balance of a wallet and also all the transactions related to DFK.
 I am sorting only the "completedQuest" transactions and from the reciept of the transaction I get the loots that the quest generated.
 
 I have provided the option to calculate the loot between two given dates , or the last 1,2,3 quests to have an idea of the daily gain.
