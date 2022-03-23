@@ -123,6 +123,16 @@ namespace WeeklyGain.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LoadingGIF {
+            get {
+                object obj = ResourceManager.GetObject("LoadingGIF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redgill {
             get {
                 object obj = ResourceManager.GetObject("redgill", resourceCulture);

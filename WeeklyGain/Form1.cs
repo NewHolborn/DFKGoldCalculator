@@ -29,6 +29,7 @@ namespace WeeklyGain
         bool mShowWallet = true;
         bool mShowBalance = true;
         Account acc = new Account();
+        PersonalData PersonalInfo = new PersonalData();
         #endregion
 
         private void LoadValuesFromResources()
@@ -61,6 +62,34 @@ namespace WeeklyGain
                 mWallet = frm.result;
             }
             acc = new Account(mWallet);
+        }
+        private void LoadPersonalInfoToScreen()
+        {
+            if (PersonalInfo.heroes != null && PersonalInfo.heroes.Heroes!=null && PersonalInfo.heroes.Heroes.Count > 0)
+            {
+                if (PersonalInfo.PersonalProfile != null)
+                {
+                    if (PersonalInfo.PersonalProfile.created != 0)
+                    {
+                        DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(PersonalInfo.PersonalProfile.created).ToLocalTime();
+                        labPersonalInfo.Text = "Your Account was created on " + dateTime.ToShortDateString() + ", your name is " + PersonalInfo.PersonalProfile.name + " and you own " + PersonalInfo.heroes.Heroes.Count.ToString() + " Heroes";
+                    }
+                    else
+                    {
+                        labPersonalInfo.Text = "Your name is " + PersonalInfo.PersonalProfile.name + " and you own " + PersonalInfo.heroes.Heroes.Count.ToString() + " Heroes";
+                    }
+                }
+                else { labPersonalInfo.Text = ""; }
+                listHeroes.Items.Clear();
+                foreach (Hero item in PersonalInfo.heroes.Heroes)
+                {
+                    DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(item.staminaFullAt).ToLocalTime();
+                    TimeSpan HowMuchTime = dateTime - DateTime.Now;
+                    ListViewItem itm = new ListViewItem(new string[] { item.id , PersonalData.GetRarityString(item.rarity), item.mainClass,item.profession , dateTime.ToLongTimeString (), HowMuchTime.Hours.ToString () + ":" + HowMuchTime.Minutes.ToString()}, -1);
+                    listHeroes.Items.Add(itm);
+                    
+                }
+            }
         }
         private void LoadValuesToScreen()
         {
@@ -109,6 +138,13 @@ namespace WeeklyGain
        
         
         #region Account
+        private void LoadPersonalInfo()
+        {
+            pictLoadingPersonal.Visible = true;
+            PersonalInfo.LoadHeroes(mWallet);
+            LoadPersonalInfoToScreen();
+            pictLoadingPersonal.Visible = false;
+        }
         private void LoadAccount()
         {
             picLoadingBalance.Visible = true;
@@ -145,6 +181,7 @@ namespace WeeklyGain
             LoadValuesFromResources();
             FixWalletShowHide();
             FixBalanceShowHide();
+            InitializeList();
             delay.Interval = 40;
             delay.Start();
             delay.Tick += Delay_Tick;
@@ -162,6 +199,8 @@ namespace WeeklyGain
 
             LoadFromTransactions(dateFrom.Value, dateTo.Value);
             LoadValuesToScreen();
+
+            LoadPersonalInfo();
         }
 
         private void labWallet_Click(object sender, EventArgs e)
@@ -185,6 +224,10 @@ namespace WeeklyGain
         private void butReload_Click(object sender, EventArgs e)
         {
             ReLoadMethod();
+        }
+        private void butPersonalReload_Click(object sender, EventArgs e)
+        {
+            LoadPersonalInfo();
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -236,9 +279,17 @@ namespace WeeklyGain
             mShowBalance = !mShowBalance;
             FixBalanceShowHide();
         }
+        private void InitializeList()
+        {
+            listHeroes.Columns.Clear();
+            listHeroes.Columns.Add("id", "ID" , 55, HorizontalAlignment.Left, -1);
+            listHeroes.Columns.Add("Rarity", "Rarity", 80, HorizontalAlignment.Left, -1);
+            listHeroes.Columns.Add("MainClass", "Main Class", 80, HorizontalAlignment.Left, -1);
+            listHeroes.Columns.Add("profession", "Profession", 80, HorizontalAlignment.Left, -1);
+            listHeroes.Columns.Add("FullStamina", "Full Stamina", 100, HorizontalAlignment.Left, -1);
+            listHeroes.Columns.Add("FullStaminaIn", "Full Stamina In", 100, HorizontalAlignment.Left, -1);
+        }
 
         #endregion
-
-        
     }
 }

@@ -44,12 +44,8 @@
             this.labWallet2 = new System.Windows.Forms.Label();
             this.labWallet = new System.Windows.Forms.Label();
             this.groupInfo = new System.Windows.Forms.GroupBox();
-            this.picShowBalance = new System.Windows.Forms.PictureBox();
-            this.picLoadingTransactions = new System.Windows.Forms.PictureBox();
-            this.picShowWallet = new System.Windows.Forms.PictureBox();
             this.labTransCount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.picLoadingBalance = new System.Windows.Forms.PictureBox();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,6 +59,23 @@
             this.textIronScale = new System.Windows.Forms.Label();
             this.textBloater = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBlueEgg = new System.Windows.Forms.Label();
+            this.textRunes = new System.Windows.Forms.Label();
+            this.textTears = new System.Windows.Forms.Label();
+            this.radioDates = new System.Windows.Forms.RadioButton();
+            this.groupDates = new System.Windows.Forms.GroupBox();
+            this.radioLastTransaction = new System.Windows.Forms.RadioButton();
+            this.radioLastTransaction2 = new System.Windows.Forms.RadioButton();
+            this.radioLastTransaction3 = new System.Windows.Forms.RadioButton();
+            this.groupPersonal = new System.Windows.Forms.GroupBox();
+            this.labPersonalInfo = new System.Windows.Forms.Label();
+            this.pictLoadingPersonal = new System.Windows.Forms.PictureBox();
+            this.butPersonalReload = new System.Windows.Forms.Button();
+            this.butReload = new System.Windows.Forms.Button();
+            this.picRune = new System.Windows.Forms.PictureBox();
+            this.picBlueEgg = new System.Windows.Forms.PictureBox();
+            this.pictears = new System.Windows.Forms.PictureBox();
             this.picBloater = new System.Windows.Forms.PictureBox();
             this.picLoadingItems = new System.Windows.Forms.PictureBox();
             this.picIronScale = new System.Windows.Forms.PictureBox();
@@ -71,25 +84,20 @@
             this.picSailFish = new System.Windows.Forms.PictureBox();
             this.picShimerscale = new System.Windows.Forms.PictureBox();
             this.picSilverfin = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBlueEgg = new System.Windows.Forms.Label();
-            this.textRunes = new System.Windows.Forms.Label();
-            this.textTears = new System.Windows.Forms.Label();
-            this.picRune = new System.Windows.Forms.PictureBox();
-            this.picBlueEgg = new System.Windows.Forms.PictureBox();
-            this.pictears = new System.Windows.Forms.PictureBox();
-            this.butReload = new System.Windows.Forms.Button();
-            this.radioDates = new System.Windows.Forms.RadioButton();
-            this.groupDates = new System.Windows.Forms.GroupBox();
-            this.radioLastTransaction = new System.Windows.Forms.RadioButton();
-            this.radioLastTransaction2 = new System.Windows.Forms.RadioButton();
-            this.radioLastTransaction3 = new System.Windows.Forms.RadioButton();
+            this.picShowBalance = new System.Windows.Forms.PictureBox();
+            this.picLoadingTransactions = new System.Windows.Forms.PictureBox();
+            this.picShowWallet = new System.Windows.Forms.PictureBox();
+            this.picLoadingBalance = new System.Windows.Forms.PictureBox();
+            this.listHeroes = new System.Windows.Forms.ListView();
             this.groupInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowBalance)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoadingTransactions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowWallet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoadingBalance)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupDates.SuspendLayout();
+            this.groupPersonal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictLoadingPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRune)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBlueEgg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictears)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBloater)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLoadingItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIronScale)).BeginInit();
@@ -98,11 +106,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSailFish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShimerscale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSilverfin)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRune)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBlueEgg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictears)).BeginInit();
-            this.groupDates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoadingTransactions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowWallet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoadingBalance)).BeginInit();
             this.SuspendLayout();
             // 
             // textGoldBloaters
@@ -244,38 +251,6 @@
             this.groupInfo.TabStop = false;
             this.groupInfo.Text = "Account Information";
             // 
-            // picShowBalance
-            // 
-            this.picShowBalance.Image = global::WeeklyGain.Properties.Resources.DontShow;
-            this.picShowBalance.Location = new System.Drawing.Point(150, 34);
-            this.picShowBalance.Name = "picShowBalance";
-            this.picShowBalance.Size = new System.Drawing.Size(25, 20);
-            this.picShowBalance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picShowBalance.TabIndex = 60;
-            this.picShowBalance.TabStop = false;
-            this.picShowBalance.Click += new System.EventHandler(this.picShowBalance_Click);
-            // 
-            // picLoadingTransactions
-            // 
-            this.picLoadingTransactions.Image = ((System.Drawing.Image)(resources.GetObject("picLoadingTransactions.Image")));
-            this.picLoadingTransactions.Location = new System.Drawing.Point(86, 53);
-            this.picLoadingTransactions.Name = "picLoadingTransactions";
-            this.picLoadingTransactions.Size = new System.Drawing.Size(29, 30);
-            this.picLoadingTransactions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLoadingTransactions.TabIndex = 54;
-            this.picLoadingTransactions.TabStop = false;
-            // 
-            // picShowWallet
-            // 
-            this.picShowWallet.Image = global::WeeklyGain.Properties.Resources.Show;
-            this.picShowWallet.Location = new System.Drawing.Point(319, 10);
-            this.picShowWallet.Name = "picShowWallet";
-            this.picShowWallet.Size = new System.Drawing.Size(25, 20);
-            this.picShowWallet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picShowWallet.TabIndex = 59;
-            this.picShowWallet.TabStop = false;
-            this.picShowWallet.Click += new System.EventHandler(this.picShowWallet_Click);
-            // 
             // labTransCount
             // 
             this.labTransCount.AutoSize = true;
@@ -293,16 +268,6 @@
             this.label5.Size = new System.Drawing.Size(75, 13);
             this.label5.TabIndex = 53;
             this.label5.Text = "Quest Count : ";
-            // 
-            // picLoadingBalance
-            // 
-            this.picLoadingBalance.Image = ((System.Drawing.Image)(resources.GetObject("picLoadingBalance.Image")));
-            this.picLoadingBalance.Location = new System.Drawing.Point(59, 30);
-            this.picLoadingBalance.Name = "picLoadingBalance";
-            this.picLoadingBalance.Size = new System.Drawing.Size(29, 30);
-            this.picLoadingBalance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLoadingBalance.TabIndex = 49;
-            this.picLoadingBalance.TabStop = false;
             // 
             // dateFrom
             // 
@@ -451,6 +416,198 @@
             this.label8.TabIndex = 58;
             this.label8.Text = "Gold : ";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBlueEgg);
+            this.groupBox2.Controls.Add(this.textRunes);
+            this.groupBox2.Controls.Add(this.textTears);
+            this.groupBox2.Controls.Add(this.picRune);
+            this.groupBox2.Controls.Add(this.picBlueEgg);
+            this.groupBox2.Controls.Add(this.pictears);
+            this.groupBox2.Location = new System.Drawing.Point(12, 103);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(207, 87);
+            this.groupBox2.TabIndex = 60;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Misc";
+            // 
+            // textBlueEgg
+            // 
+            this.textBlueEgg.AutoSize = true;
+            this.textBlueEgg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBlueEgg.Location = new System.Drawing.Point(142, 22);
+            this.textBlueEgg.Name = "textBlueEgg";
+            this.textBlueEgg.Size = new System.Drawing.Size(14, 16);
+            this.textBlueEgg.TabIndex = 63;
+            this.textBlueEgg.Text = "0";
+            // 
+            // textRunes
+            // 
+            this.textRunes.AutoSize = true;
+            this.textRunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textRunes.Location = new System.Drawing.Point(77, 22);
+            this.textRunes.Name = "textRunes";
+            this.textRunes.Size = new System.Drawing.Size(14, 16);
+            this.textRunes.TabIndex = 62;
+            this.textRunes.Text = "0";
+            // 
+            // textTears
+            // 
+            this.textTears.AutoSize = true;
+            this.textTears.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTears.Location = new System.Drawing.Point(10, 22);
+            this.textTears.Name = "textTears";
+            this.textTears.Size = new System.Drawing.Size(14, 16);
+            this.textTears.TabIndex = 61;
+            this.textTears.Text = "0";
+            // 
+            // radioDates
+            // 
+            this.radioDates.AutoSize = true;
+            this.radioDates.Checked = true;
+            this.radioDates.Location = new System.Drawing.Point(373, 42);
+            this.radioDates.Name = "radioDates";
+            this.radioDates.Size = new System.Drawing.Size(14, 13);
+            this.radioDates.TabIndex = 61;
+            this.radioDates.TabStop = true;
+            this.radioDates.UseVisualStyleBackColor = true;
+            this.radioDates.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
+            // 
+            // groupDates
+            // 
+            this.groupDates.Controls.Add(this.dateFrom);
+            this.groupDates.Controls.Add(this.label6);
+            this.groupDates.Controls.Add(this.dateTo);
+            this.groupDates.Controls.Add(this.label7);
+            this.groupDates.Location = new System.Drawing.Point(393, 12);
+            this.groupDates.Name = "groupDates";
+            this.groupDates.Size = new System.Drawing.Size(144, 65);
+            this.groupDates.TabIndex = 62;
+            this.groupDates.TabStop = false;
+            this.groupDates.Text = "Dates";
+            // 
+            // radioLastTransaction
+            // 
+            this.radioLastTransaction.AutoSize = true;
+            this.radioLastTransaction.Location = new System.Drawing.Point(373, 83);
+            this.radioLastTransaction.Name = "radioLastTransaction";
+            this.radioLastTransaction.Size = new System.Drawing.Size(85, 17);
+            this.radioLastTransaction.TabIndex = 63;
+            this.radioLastTransaction.Text = "   Last Quest";
+            this.radioLastTransaction.UseVisualStyleBackColor = true;
+            this.radioLastTransaction.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
+            // 
+            // radioLastTransaction2
+            // 
+            this.radioLastTransaction2.AutoSize = true;
+            this.radioLastTransaction2.Location = new System.Drawing.Point(373, 106);
+            this.radioLastTransaction2.Name = "radioLastTransaction2";
+            this.radioLastTransaction2.Size = new System.Drawing.Size(99, 17);
+            this.radioLastTransaction2.TabIndex = 64;
+            this.radioLastTransaction2.Text = "   Last 2 Quests";
+            this.radioLastTransaction2.UseVisualStyleBackColor = true;
+            this.radioLastTransaction2.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
+            // 
+            // radioLastTransaction3
+            // 
+            this.radioLastTransaction3.AutoSize = true;
+            this.radioLastTransaction3.Location = new System.Drawing.Point(373, 129);
+            this.radioLastTransaction3.Name = "radioLastTransaction3";
+            this.radioLastTransaction3.Size = new System.Drawing.Size(99, 17);
+            this.radioLastTransaction3.TabIndex = 65;
+            this.radioLastTransaction3.Text = "   Last 3 Quests";
+            this.radioLastTransaction3.UseVisualStyleBackColor = true;
+            this.radioLastTransaction3.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
+            // 
+            // groupPersonal
+            // 
+            this.groupPersonal.Controls.Add(this.listHeroes);
+            this.groupPersonal.Controls.Add(this.pictLoadingPersonal);
+            this.groupPersonal.Controls.Add(this.labPersonalInfo);
+            this.groupPersonal.Controls.Add(this.butPersonalReload);
+            this.groupPersonal.Location = new System.Drawing.Point(12, 341);
+            this.groupPersonal.Name = "groupPersonal";
+            this.groupPersonal.Size = new System.Drawing.Size(517, 221);
+            this.groupPersonal.TabIndex = 67;
+            this.groupPersonal.TabStop = false;
+            this.groupPersonal.Text = "Personal";
+            // 
+            // labPersonalInfo
+            // 
+            this.labPersonalInfo.AutoSize = true;
+            this.labPersonalInfo.Location = new System.Drawing.Point(10, 16);
+            this.labPersonalInfo.Name = "labPersonalInfo";
+            this.labPersonalInfo.Size = new System.Drawing.Size(35, 13);
+            this.labPersonalInfo.TabIndex = 60;
+            this.labPersonalInfo.Text = "You...";
+            // 
+            // pictLoadingPersonal
+            // 
+            this.pictLoadingPersonal.Image = ((System.Drawing.Image)(resources.GetObject("pictLoadingPersonal.Image")));
+            this.pictLoadingPersonal.Location = new System.Drawing.Point(402, 180);
+            this.pictLoadingPersonal.Name = "pictLoadingPersonal";
+            this.pictLoadingPersonal.Size = new System.Drawing.Size(29, 30);
+            this.pictLoadingPersonal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictLoadingPersonal.TabIndex = 61;
+            this.pictLoadingPersonal.TabStop = false;
+            // 
+            // butPersonalReload
+            // 
+            this.butPersonalReload.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.butPersonalReload.Image = global::WeeklyGain.Properties.Resources.reload;
+            this.butPersonalReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.butPersonalReload.Location = new System.Drawing.Point(437, 180);
+            this.butPersonalReload.Name = "butPersonalReload";
+            this.butPersonalReload.Size = new System.Drawing.Size(74, 35);
+            this.butPersonalReload.TabIndex = 59;
+            this.butPersonalReload.Text = "Reload";
+            this.butPersonalReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.butPersonalReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.butPersonalReload.UseVisualStyleBackColor = false;
+            this.butPersonalReload.Click += new System.EventHandler(this.butPersonalReload_Click);
+            // 
+            // butReload
+            // 
+            this.butReload.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.butReload.Image = global::WeeklyGain.Properties.Resources.reload;
+            this.butReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.butReload.Location = new System.Drawing.Point(415, 155);
+            this.butReload.Name = "butReload";
+            this.butReload.Size = new System.Drawing.Size(74, 35);
+            this.butReload.TabIndex = 58;
+            this.butReload.Text = "Reload";
+            this.butReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.butReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.butReload.UseVisualStyleBackColor = false;
+            this.butReload.Click += new System.EventHandler(this.butReload_Click);
+            // 
+            // picRune
+            // 
+            this.picRune.Image = global::WeeklyGain.Properties.Resources.Rune;
+            this.picRune.Location = new System.Drawing.Point(72, 19);
+            this.picRune.Name = "picRune";
+            this.picRune.Size = new System.Drawing.Size(60, 60);
+            this.picRune.TabIndex = 33;
+            this.picRune.TabStop = false;
+            // 
+            // picBlueEgg
+            // 
+            this.picBlueEgg.Image = global::WeeklyGain.Properties.Resources.blueegg;
+            this.picBlueEgg.Location = new System.Drawing.Point(138, 19);
+            this.picBlueEgg.Name = "picBlueEgg";
+            this.picBlueEgg.Size = new System.Drawing.Size(60, 60);
+            this.picBlueEgg.TabIndex = 31;
+            this.picBlueEgg.TabStop = false;
+            // 
+            // pictears
+            // 
+            this.pictears.Image = ((System.Drawing.Image)(resources.GetObject("pictears.Image")));
+            this.pictears.Location = new System.Drawing.Point(6, 19);
+            this.pictears.Name = "pictears";
+            this.pictears.Size = new System.Drawing.Size(60, 60);
+            this.pictears.TabIndex = 29;
+            this.pictears.TabStop = false;
+            // 
             // picBloater
             // 
             this.picBloater.Image = ((System.Drawing.Image)(resources.GetObject("picBloater.Image")));
@@ -524,157 +681,67 @@
             this.picSilverfin.TabIndex = 24;
             this.picSilverfin.TabStop = false;
             // 
-            // groupBox2
+            // picShowBalance
             // 
-            this.groupBox2.Controls.Add(this.textBlueEgg);
-            this.groupBox2.Controls.Add(this.textRunes);
-            this.groupBox2.Controls.Add(this.textTears);
-            this.groupBox2.Controls.Add(this.picRune);
-            this.groupBox2.Controls.Add(this.picBlueEgg);
-            this.groupBox2.Controls.Add(this.pictears);
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(207, 87);
-            this.groupBox2.TabIndex = 60;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Misc";
+            this.picShowBalance.Image = global::WeeklyGain.Properties.Resources.DontShow;
+            this.picShowBalance.Location = new System.Drawing.Point(150, 34);
+            this.picShowBalance.Name = "picShowBalance";
+            this.picShowBalance.Size = new System.Drawing.Size(25, 20);
+            this.picShowBalance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picShowBalance.TabIndex = 60;
+            this.picShowBalance.TabStop = false;
+            this.picShowBalance.Click += new System.EventHandler(this.picShowBalance_Click);
             // 
-            // textBlueEgg
+            // picLoadingTransactions
             // 
-            this.textBlueEgg.AutoSize = true;
-            this.textBlueEgg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBlueEgg.Location = new System.Drawing.Point(142, 22);
-            this.textBlueEgg.Name = "textBlueEgg";
-            this.textBlueEgg.Size = new System.Drawing.Size(14, 16);
-            this.textBlueEgg.TabIndex = 63;
-            this.textBlueEgg.Text = "0";
+            this.picLoadingTransactions.Image = ((System.Drawing.Image)(resources.GetObject("picLoadingTransactions.Image")));
+            this.picLoadingTransactions.Location = new System.Drawing.Point(86, 53);
+            this.picLoadingTransactions.Name = "picLoadingTransactions";
+            this.picLoadingTransactions.Size = new System.Drawing.Size(29, 30);
+            this.picLoadingTransactions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLoadingTransactions.TabIndex = 54;
+            this.picLoadingTransactions.TabStop = false;
             // 
-            // textRunes
+            // picShowWallet
             // 
-            this.textRunes.AutoSize = true;
-            this.textRunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textRunes.Location = new System.Drawing.Point(77, 22);
-            this.textRunes.Name = "textRunes";
-            this.textRunes.Size = new System.Drawing.Size(14, 16);
-            this.textRunes.TabIndex = 62;
-            this.textRunes.Text = "0";
+            this.picShowWallet.Image = global::WeeklyGain.Properties.Resources.Show;
+            this.picShowWallet.Location = new System.Drawing.Point(319, 10);
+            this.picShowWallet.Name = "picShowWallet";
+            this.picShowWallet.Size = new System.Drawing.Size(25, 20);
+            this.picShowWallet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picShowWallet.TabIndex = 59;
+            this.picShowWallet.TabStop = false;
+            this.picShowWallet.Click += new System.EventHandler(this.picShowWallet_Click);
             // 
-            // textTears
+            // picLoadingBalance
             // 
-            this.textTears.AutoSize = true;
-            this.textTears.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTears.Location = new System.Drawing.Point(10, 22);
-            this.textTears.Name = "textTears";
-            this.textTears.Size = new System.Drawing.Size(14, 16);
-            this.textTears.TabIndex = 61;
-            this.textTears.Text = "0";
+            this.picLoadingBalance.Image = ((System.Drawing.Image)(resources.GetObject("picLoadingBalance.Image")));
+            this.picLoadingBalance.Location = new System.Drawing.Point(59, 30);
+            this.picLoadingBalance.Name = "picLoadingBalance";
+            this.picLoadingBalance.Size = new System.Drawing.Size(29, 30);
+            this.picLoadingBalance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLoadingBalance.TabIndex = 49;
+            this.picLoadingBalance.TabStop = false;
             // 
-            // picRune
+            // listHeroes
             // 
-            this.picRune.Image = global::WeeklyGain.Properties.Resources.Rune;
-            this.picRune.Location = new System.Drawing.Point(72, 19);
-            this.picRune.Name = "picRune";
-            this.picRune.Size = new System.Drawing.Size(60, 60);
-            this.picRune.TabIndex = 33;
-            this.picRune.TabStop = false;
-            // 
-            // picBlueEgg
-            // 
-            this.picBlueEgg.Image = global::WeeklyGain.Properties.Resources.blueegg;
-            this.picBlueEgg.Location = new System.Drawing.Point(138, 19);
-            this.picBlueEgg.Name = "picBlueEgg";
-            this.picBlueEgg.Size = new System.Drawing.Size(60, 60);
-            this.picBlueEgg.TabIndex = 31;
-            this.picBlueEgg.TabStop = false;
-            // 
-            // pictears
-            // 
-            this.pictears.Image = ((System.Drawing.Image)(resources.GetObject("pictears.Image")));
-            this.pictears.Location = new System.Drawing.Point(6, 19);
-            this.pictears.Name = "pictears";
-            this.pictears.Size = new System.Drawing.Size(60, 60);
-            this.pictears.TabIndex = 29;
-            this.pictears.TabStop = false;
-            // 
-            // butReload
-            // 
-            this.butReload.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.butReload.Image = global::WeeklyGain.Properties.Resources.reload;
-            this.butReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.butReload.Location = new System.Drawing.Point(415, 155);
-            this.butReload.Name = "butReload";
-            this.butReload.Size = new System.Drawing.Size(74, 35);
-            this.butReload.TabIndex = 58;
-            this.butReload.Text = "Reload";
-            this.butReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.butReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.butReload.UseVisualStyleBackColor = false;
-            this.butReload.Click += new System.EventHandler(this.butReload_Click);
-            // 
-            // radioDates
-            // 
-            this.radioDates.AutoSize = true;
-            this.radioDates.Checked = true;
-            this.radioDates.Location = new System.Drawing.Point(373, 42);
-            this.radioDates.Name = "radioDates";
-            this.radioDates.Size = new System.Drawing.Size(14, 13);
-            this.radioDates.TabIndex = 61;
-            this.radioDates.TabStop = true;
-            this.radioDates.UseVisualStyleBackColor = true;
-            this.radioDates.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
-            // 
-            // groupDates
-            // 
-            this.groupDates.Controls.Add(this.dateFrom);
-            this.groupDates.Controls.Add(this.label6);
-            this.groupDates.Controls.Add(this.dateTo);
-            this.groupDates.Controls.Add(this.label7);
-            this.groupDates.Location = new System.Drawing.Point(393, 12);
-            this.groupDates.Name = "groupDates";
-            this.groupDates.Size = new System.Drawing.Size(144, 65);
-            this.groupDates.TabIndex = 62;
-            this.groupDates.TabStop = false;
-            this.groupDates.Text = "Dates";
-            // 
-            // radioLastTransaction
-            // 
-            this.radioLastTransaction.AutoSize = true;
-            this.radioLastTransaction.Location = new System.Drawing.Point(373, 83);
-            this.radioLastTransaction.Name = "radioLastTransaction";
-            this.radioLastTransaction.Size = new System.Drawing.Size(85, 17);
-            this.radioLastTransaction.TabIndex = 63;
-            this.radioLastTransaction.Text = "   Last Quest";
-            this.radioLastTransaction.UseVisualStyleBackColor = true;
-            this.radioLastTransaction.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
-            // 
-            // radioLastTransaction2
-            // 
-            this.radioLastTransaction2.AutoSize = true;
-            this.radioLastTransaction2.Location = new System.Drawing.Point(373, 106);
-            this.radioLastTransaction2.Name = "radioLastTransaction2";
-            this.radioLastTransaction2.Size = new System.Drawing.Size(99, 17);
-            this.radioLastTransaction2.TabIndex = 64;
-            this.radioLastTransaction2.Text = "   Last 2 Quests";
-            this.radioLastTransaction2.UseVisualStyleBackColor = true;
-            this.radioLastTransaction2.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
-            // 
-            // radioLastTransaction3
-            // 
-            this.radioLastTransaction3.AutoSize = true;
-            this.radioLastTransaction3.Location = new System.Drawing.Point(373, 129);
-            this.radioLastTransaction3.Name = "radioLastTransaction3";
-            this.radioLastTransaction3.Size = new System.Drawing.Size(99, 17);
-            this.radioLastTransaction3.TabIndex = 65;
-            this.radioLastTransaction3.Text = "   Last 3 Quests";
-            this.radioLastTransaction3.UseVisualStyleBackColor = true;
-            this.radioLastTransaction3.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
+            this.listHeroes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listHeroes.HideSelection = false;
+            this.listHeroes.Location = new System.Drawing.Point(13, 32);
+            this.listHeroes.MultiSelect = false;
+            this.listHeroes.Name = "listHeroes";
+            this.listHeroes.Size = new System.Drawing.Size(491, 142);
+            this.listHeroes.TabIndex = 62;
+            this.listHeroes.UseCompatibleStateImageBehavior = false;
+            this.listHeroes.View = System.Windows.Forms.View.Details;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(535, 343);
+            this.ClientSize = new System.Drawing.Size(535, 574);
+            this.Controls.Add(this.groupPersonal);
             this.Controls.Add(this.radioLastTransaction3);
             this.Controls.Add(this.radioLastTransaction2);
             this.Controls.Add(this.radioLastTransaction);
@@ -695,12 +762,18 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupInfo.ResumeLayout(false);
             this.groupInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowBalance)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoadingTransactions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowWallet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoadingBalance)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupDates.ResumeLayout(false);
+            this.groupDates.PerformLayout();
+            this.groupPersonal.ResumeLayout(false);
+            this.groupPersonal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictLoadingPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRune)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBlueEgg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictears)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBloater)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLoadingItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIronScale)).EndInit();
@@ -709,13 +782,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSailFish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShimerscale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSilverfin)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRune)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBlueEgg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictears)).EndInit();
-            this.groupDates.ResumeLayout(false);
-            this.groupDates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoadingTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowWallet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoadingBalance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,6 +848,11 @@
         private System.Windows.Forms.RadioButton radioLastTransaction;
         private System.Windows.Forms.RadioButton radioLastTransaction2;
         private System.Windows.Forms.RadioButton radioLastTransaction3;
+        private System.Windows.Forms.GroupBox groupPersonal;
+        private System.Windows.Forms.Label labPersonalInfo;
+        private System.Windows.Forms.Button butPersonalReload;
+        private System.Windows.Forms.PictureBox pictLoadingPersonal;
+        private System.Windows.Forms.ListView listHeroes;
     }
 }
 
