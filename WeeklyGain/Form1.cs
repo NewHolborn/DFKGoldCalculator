@@ -207,8 +207,11 @@ namespace WeeklyGain
         {
             Form2 frm = new Form2();
             frm.ShowDialog(this);
-            mWallet = frm.result;
-            acc = new Account(mWallet);
+            if (frm.result != "")
+            {
+                mWallet = frm.result;
+                acc = new Account(mWallet);
+            }
 
             LoadAccount();
             LoadValuesToScreen();
