@@ -103,8 +103,8 @@ namespace WeeklyGain
             textShimerscale.Text = acc.Shimerscale.ToString();
             textSilverfin.Text = acc.Silverfin.ToString();
 
-            int total = 0;
-            textGoldBloaters.Text = (acc.Bloaters * 1).ToString(); total += acc.Bloaters * 1;
+            double total = 0;
+            textGoldBloaters.Text = (acc.Bloaters * 1).ToString(); total += acc.Bloaters * 2.5;
             textGoldIronScale.Text = (acc.IronScales * 5).ToString(); total += acc.IronScales * 5;
             textGoldLanterney.Text = (acc.Lanterney * 5).ToString(); total += acc.Lanterney * 5;
             textGoldRedGill.Text = (acc.RedGill * 15).ToString(); total += acc.RedGill * 15;
@@ -197,8 +197,7 @@ namespace WeeklyGain
             if (acc.CompletedHashes != null) labTransCount.Text = acc.CompletedHashes.Count.ToString();
             picLoadingTransactions.Visible = false;
 
-            LoadFromTransactions(dateFrom.Value, dateTo.Value);
-            LoadValuesToScreen();
+            ReLoadMethod();
 
             LoadPersonalInfo();
         }
